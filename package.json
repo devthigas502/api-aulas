@@ -5,17 +5,28 @@
   "scripts": {
     "dev": "tsx src/server.ts --watch",
     "start": "node dist/server.js",
-    "build": "tsc"
+    "build": "tsc",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
   },
   "author": "",
   "license": "ISC",
   "keywords": [],
   "description": "",
   "dependencies": {
-    "fastify": "^5.5.0"
+    "@types/pg": "^8.15.5",
+    "dotenv": "^17.2.1",
+    "drizzle-orm": "^0.44.5",
+    "fastify": "^5.5.0",
+    "pg": "^8.16.3",
+    "postgres": "^3.4.7"
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
+    "drizzle-kit": "^0.31.4",
+    "tsx": "^4.20.5",
     "typescript": "^5.9.2"
   },
   "type": "module"
