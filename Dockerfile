@@ -11,6 +11,9 @@ COPY . .
 
 RUN npm run build
 
-EXPOSE 3000
+EXPOSE 8080
+
+ENV PORT=8080
+ENV HOST=0.0.0.0
 
 CMD ["npm", "start"]
